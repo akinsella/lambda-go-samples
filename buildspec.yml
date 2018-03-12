@@ -49,7 +49,7 @@ phases:
       - go build -o main
 
       # Package our application with AWS SAM
-      - aws cloudformation package --template-file template.yml --s3-bucket ${S3_BUCKET} --output-template-file packaged.yml
+      - aws cloudformation package --template-file template.yml --s3-bucket ${S3_BUCKET} --kms-key-id 78766660-afd4-4e06-88f4-ed4df88ca785 --output-template-file packaged.yml
 
 artifacts:
   files:
